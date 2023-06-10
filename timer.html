@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@800&family=Creepster&family=Tangerine&family=Tilt+Warp&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+        <div class="logo">CLOCKWORLD</div>
+        <div class="hamburgerlines">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+        <span class="line line3"></span>
+
+
+        </div>
+<ul class="linkscontainer">
+      
+      <li class="link">  <a href="index.html"> home</a> </li>
+      <li class="link">  <a href="timer.html">timer</a> </li>
+       <li class="link">  <a href="stopwatch.html"> stopwatch</a> </li>
+       </ul>
+      <nav>
+
+
+  </header>
+     <H1 class="nit"> <span>WELCOME TIME ACTUATORS 
+        <BR>
+             THE TIME IS AT YOUR COMMAND </span> &#8987</h1>
+ 
+  <div class="contain">
+    <span style="--i:1">T</span>
+    <span style="--i:2">I</span>
+    <span style="--i:3">M</span>
+    <span style="--i:4">E</span>
+    <span style="--i:5">R</span>
+</div>
+
+<div class="loader">
+    <span class="top"></span>
+    <span class="bottom"></span>
+</div>
+
+
+
+    <div class="container" onclick="fun()">
+    <h2>Enter start time</h2>
+
+    <div oninput="displaymin()">
+      <input type="number" onkeyup="m()"id="hours" min="0" max="23" placeholder="hrs" /> :
+      <input type="number" onkeyup="m()" id="minutes"  min="0" max="59" placeholder="mins" /> :
+      <input type="number" onkeyup="m()" id="seconds" min="0" max="59" placeholder="secs" />
+    </div>
+    <div id="display">00:00:00</div>
+    <div>
+      <button id="start" disabled onclick="watch()">Start</button>
+    </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>

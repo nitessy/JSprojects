@@ -1,0 +1,356 @@
+
+.header{
+  box-shadow: 1px 1px 4px rgb(142, 129 , 129);
+  background-color: #fff;
+}
+.navbar{
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  padding: 15px;
+  background-color: #f4f4f4;
+}
+.logo{
+  font-weight: bolder;
+  font-size: 25px;
+  color: rgb(43, 86, 90);
+  font-family: 'Cinzel', serif;
+  text-shadow: 1px 1px black;
+  position: relative;
+}
+
+.linkscontainer{
+  display: flex;
+
+}
+.link{
+  padding: 10px;
+  list-style-type: none;
+  transition: all 0.3s;
+}
+.link a{
+  text-decoration: none;
+  color: rgb(101, 96,96);
+  font-size: larger;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.link:hover{
+  transform: scale(1.2);
+}
+.link a:hover{
+  color: blue;
+}
+
+/* hamburger menu*/
+.hamburgerlines{
+  display: none;
+  width:35px;
+  height: 30px;
+  margin: 10px 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.line{
+  background-color: rgb(69,65,65);
+  position: absolute;
+  border-radius: 2px;
+  width: 100%;
+  height: 4px;
+  transition-duration: 500ms;
+}
+
+.line1{
+  top: 0px;
+  left: 0px;
+}
+
+.line2{
+  top: 13px;
+  left: 0px;
+  opacity: 1;
+}
+.line3{
+  bottom: 0px;
+  left: 0px;
+}
+
+.hamburgerlines.open.line1{
+  transform:rotate(45deg);
+  top: 13px;
+}
+.hamburgerlines.open.line2{
+  opacity: 0;
+}
+.hamburgerlines.open.line3{
+  transform: rotate(-45deg);
+  top: 13px;
+}
+@media (max-width:768px){
+  .hamburgerlines{
+      display: inline-block;  
+  }
+  .linkscontainer{
+     position: absolute;
+     z-index: 1;
+      display: none;
+  }
+  .logo{
+      font-size: 25px;
+  }
+  .linkscontainer{
+      position: absolute;
+      top: 70px;
+      background-color: rgb(80, 83, 83);
+       width:70%; 
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      left: -100%;
+      transition: 0.6s ease-in-out;
+  }
+.link{
+  margin: 20px;
+}
+
+.link a{
+  color: white;
+  font-size: 30px;
+  font-family: 'Cinzel', serif;
+}
+.hamburgerlines.open + .linkscontainer{
+  left: 0%;
+}
+}
+
+
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+
+     display: flex; 
+    flex-direction: column;
+    /* align-items: center; */
+     /* justify-content: center;  */
+    background-image: repeating-linear-gradient(100deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b,#6fba82);
+}
+
+button{
+    margin: 0.3em;
+    border: none;
+    color: aliceblue;
+    padding: 1em;
+    background-color:blue;
+    position: relative;
+    left: 160px;
+    font-size: large;
+}
+
+#display{
+    height: 1.5em;
+    width: auto;
+    font-size: 3.2em;
+     margin-top: 10px;
+    color: orangered;
+    position: relative;
+    left: 120px;
+}
+input{
+    padding: 1em;
+    font-size: larger;
+    margin-left: 20px;
+}
+
+h1{
+    font-family: 'Cinzel', serif;  
+/* font-family: 'Creepster', cursive;  */
+  /* font-family: 'Tilt Warp', cursive; */
+  text-align: center;
+}
+
+
+
+h2{
+    
+font-family: 'Tangerine', cursive;
+font-size: 60px;
+letter-spacing: 6px;
+}
+
+.container{
+    background-color:yellow;
+    border: 4px solid black;
+    width: 450px;
+    margin-top: 60px;
+    position: relative;
+    padding-top: 30px;
+    align-self: center;
+}
+
+
+
+
+ h1 span{
+    
+        background-image:repeating-linear-gradient(45deg,blue 0%, aqua 30%, yellow 67%,red 100%);
+         background-size: auto; 
+        background-clip: border-box;
+        background-size: 200% auto;
+        color: white;
+        background-clip: text;
+        text-fill-color:transparent;
+        -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent; 
+         animation: anim 2s linear infinite;
+    
+    
+    
+    }
+    @keyframes anim{
+        to{
+            background-position: 150% center;
+        }
+}
+
+nav{
+    background-color: gray;
+    border-radius: 1vw;
+}
+
+nav ul li{
+    float: left;
+    list-style: none;
+      margin: 5px 40px;  
+    padding-left: 20%;
+    padding: 1%;
+
+}
+
+nav ul{
+    overflow: hidden;
+}
+
+nav li a{
+     padding: 40px 40px; 
+    text-decoration: none;
+    color: white;
+    font-family: 'Cinzel', serif;  
+    font-size: 1.5vw;
+}
+    
+
+nav li a:hover{
+    color: blue;
+}
+
+
+.loader {
+    margin-top: 50px;
+  width: 4.3em;
+  height: 9.8em;
+  font-size: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  animation: rotating 2s linear infinite;
+  align-self: center;
+}
+@keyframes rotating {
+  0%,90% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(0.5turn);
+  }
+}
+.loader::after {
+  content: '';
+  position: absolute;
+  width: 0.2em;
+  height: 4.8em;
+  background-color: violet;
+  top: 1em;
+  animation: flow 2s linear infinite;
+}
+@keyframes flow {
+  10%,100% {
+    transform: translateY(3.2em);
+  }
+}
+.top,
+.bottom {
+  width: 3.5em;
+  height: 3.5em;
+  border-style: solid;
+  border-color: brown;
+  border-width: 0.2em 0.2em 0.6em 0.6em;
+  border-radius: 50% 100% 50% 30%;
+  position: relative;
+  overflow: hidden;
+}
+.top {
+  transform: rotate(-45deg);
+}
+.bottom {
+  transform: rotate(135deg);
+}
+.top::before,.bottom::before {
+  content: '';
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background-color:violet;
+  animation: 2s linear infinite;
+}
+.top::before {
+  border-radius: 0 100% 0 0;
+  animation-name: drop-sand;
+}
+@keyframes drop-sand {
+  to {transform: translate(-2.5em, 2.5em);}
+}
+.bottom::before {
+  border-radius: 0 0 0 35%;
+  transform: translate(2.5em, -2.5em);
+  animation-name: fill-sand;
+}
+@keyframes fill-sand {
+  to {transform: translate(0, 0);}
+}
+
+.contain{
+    position: relative;
+    -webkit-box-reflect: below -20px linear-gradient(transparent,rgba(0,0,0,.2));
+    align-self: center;
+
+}
+
+.contain span{
+    position: relative;
+    display: inline-block;
+    font-size: 60px;
+    top: 20px;
+    letter-spacing: 10px;
+ font-family: 'Creepster', cursive; 
+ color: violet;
+
+    animation: jump 1s infinite;
+    animation-delay: calc(.1s * var(--i));
+}
+
+@keyframes jump{
+    0%,40%,100%{
+        transform: translateY(0)
+    }
+
+20%{
+    transform: translateY(-20px)
+}
+}

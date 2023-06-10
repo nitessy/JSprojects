@@ -1,0 +1,243 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Cinzel', serif;
+    background-color: black;
+}
+
+.header{
+    box-shadow: 1px 1px 4px rgb(142, 129 , 129);
+    background-color: #fff;
+}
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+}
+.logo{
+    font-weight: bolder;
+    font-size: 25px;
+    color: rgb(43, 86, 90);
+    font-family: 'Cinzel', serif;
+    text-shadow: 1px 1px black;
+    position: relative;
+}
+
+.linkscontainer{
+    display: flex;
+
+}
+.link{
+    padding: 10px;
+    list-style-type: none;
+    transition: all 0.3s;
+}
+.link a{
+    text-decoration: none;
+    color: rgb(101, 96,96);
+    font-size: larger;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.link:hover{
+    transform: scale(1.2);
+}
+.link a:hover{
+    color: blue;
+}
+
+/*hamburger menu */
+.hamburgerlines{
+    display: none;
+    width:35px;
+    height: 30px;
+    margin: 10px 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.line{
+    background-color: rgb(69,65,65);
+    position: absolute;
+    border-radius: 2px;
+    width: 100%;
+    height: 4px;
+    transition-duration: 500ms;
+}
+
+.line1{
+    top: 0px;
+    left: 0px;
+}
+
+.line2{
+    top: 13px;
+    left: 0px;
+    opacity: 1;
+}
+.line3{
+    bottom: 0px;
+    left: 0px;
+}
+
+.hamburgerlines.open.line1{
+    transform:rotate(45deg);
+    top: 13px;
+}
+.hamburgerlines.open.line2{
+    opacity: 0;
+}
+.hamburgerlines.open.line3{
+    transform: rotate(-45deg);
+    top: 13px;
+}
+@media (max-width:768px){
+    .hamburgerlines{
+        display: inline-block;  
+    }
+    .linkscontainer{
+        display: none;
+    }
+    .logo{
+        font-size: 25px;
+    }
+    .linkscontainer{
+        position: absolute;
+        z-index: 1;
+        top: 70px;
+        background-color: rgb(80, 83, 83);
+        width: 70%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        left: -100%;
+        transition: 0.6s ease-in-out;
+    }
+.link{
+    margin: 20px;
+}
+
+.link a{
+    color: white;
+    font-size: 30px;
+}
+.hamburgerlines.open + .linkscontainer{
+    left: 0%;
+}
+}        
+
+h1{
+    font-weight: bolder;
+    text-align: center;
+    color: red;
+    margin: 30px;
+    font-size: 35px;
+}
+
+h2{
+    margin: 20px;
+   /* font-family: 'Zeyada', cursive; 
+     font-family: 'Tilt Warp', cursive; */
+    font-family: 'Tangerine', cursive;
+    font-weight: bold;
+    text-align: center;
+    color: blueviolet;
+    letter-spacing: 8px;
+    font-size: 45px;
+
+}
+ 
+.strange{
+position: relative;
+align-self: center;
+height: 50vh;
+}
+
+
+
+
+
+
+
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+.container{
+text-align: center;
+width: 200px;
+background-color: #e74c3c;
+}
+.box{
+display: inline-block;
+height: 200px;
+position: relative;
+transition: all .2s ease;
+}
+.clock{
+border-radius: 60px;
+border: 3px solid #fff;
+height: 80px;
+width: 80px;
+position: relative;
+top: 28%;
+top: -webkit-calc(50% - 43px);
+top: calc(50% - 43px);
+  left: 35%;
+  left: -webkit-calc(50% - 43px);
+  left: calc(50% - 43px);
+}
+.clock:after{
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  top:2px;
+  left: 48%;
+  height: 38px;
+  width: 4px;
+  border-radius: 5px;
+  -webkit-transform-origin: 50% 97%;
+      transform-origin: 50% 97%;
+  -webkit-animation: grdAiguille 2s linear infinite;
+      animation: grdAiguille 2s linear infinite;
+}
+@-webkit-keyframes grdAiguille{
+    0%{-webkit-transform:rotate(0deg);}
+    100%{-webkit-transform:rotate(360deg);}
+}
+.clock:before{
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  top:6px;
+  left: 48%;
+  height: 35px;
+  width: 4px;
+  border-radius: 5px;
+  -webkit-transform-origin: 50% 94%;
+      transform-origin: 50% 94%;
+  -webkit-animation: ptAiguille 12s linear infinite;
+      animation: ptAiguille 12s linear infinite;
+}
+@-webkit-keyframes ptAiguille{
+    0%{-webkit-transform:rotate(0deg);}
+    100%{-webkit-transform:rotate(360deg);}
+}
+
+.master{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+
+
