@@ -129,7 +129,8 @@ body{
 .hamburgerlines.open + .linkscontainer{
     left: 0%;
 }
-}        
+}
+    
 
 h1{
     font-weight: bolder;
@@ -238,6 +239,23 @@ top: calc(50% - 43px);
     align-items: center;
     justify-content: center;
     align-self: center;
+    margin-top: 70px;
 }
 
 
+@media (max-width:768px){
+    h1{
+        font-size: 28px;
+        margin: 22px;
+        letter-spacing: 4px;
+    }
+
+    h2{
+        font-size: 30px;
+        letter-spacing: 5px;
+        margin: 15px;
+    }
+    .master{
+        margin-top: 20px;
+    }
+}

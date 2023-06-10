@@ -4,6 +4,7 @@
 }
 body{ 
    background-color: #f4f4f4;
+   /* width: 50px; */
 
 }
 
@@ -153,7 +154,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: fit-content;
+    width:100%;
     align-self: center;
     margin-top: 30px;
 }
@@ -161,10 +162,12 @@ body{
 .container{
    position: relative;
     border: 6px solid black;
-    width: fit-content;
+    width:fit-content;
     align-self: center;
     background-color:violet;
     margin-top: 100px;
+    overflow: hidden;
+    
 }
 
 #stopwatch{
@@ -176,20 +179,7 @@ body{
 }
 
 
-button{
-    padding: 15px;
-    background-color:violet;
-    border: none;
-    border-radius: 7px;
-    color: red;
-    font-size: larger;
-    margin: 7px;
-    font-family: 'Cinzel', serif;  
-    width: 100px;
-    box-shadow: 5px 5px 1px rgba(56, 51, 51, 0.5);
-    transition: all 0.5s;
 
-}
 button:hover{
     cursor: pointer;
 }
@@ -269,6 +259,35 @@ color:RED;
    transform: translateY(-20px)
 }
 }
+button{
+   padding: 15px;
+   background-color:violet;
+   border: none;
+   border-radius: 7px;
+   color: red;
+   box-shadow: 5px 5px 1px rgba(56,51,51,0.5);
+   transition: all 0.5s;
+   font-size: larger;
+   margin: 15px;
+   width: 80px;
+}
 
-
- 
+@media (max-width:768px){
+   #stopwatch{
+      font-size: 60px;
+      padding: 4px;
+   }
+   button{
+      padding: 12px;
+      font-size:medium;
+      margin: 12px;
+      width: 55px;
+      text-align: center;
+   }
+   .contain span{
+      font-size: 40px;
+      letter-spacing: 6px;
+   }
+   
+   }
+   
