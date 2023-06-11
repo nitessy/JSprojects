@@ -6,6 +6,8 @@ var min = 0;
 var sec = 0;
 var stoptime = true;
 let start = document.getElementById("start") ;
+let sttop = document.getElementById("stop");
+let reset = document.getElementById("reset");
 
 
 
@@ -15,6 +17,8 @@ function startTimer() {
     stoptime = false;
     timerCycle();
     start.disabled = true;
+    reset.disabled = false;
+     sttop.disabled = false;
   
   }
 }
@@ -22,6 +26,9 @@ function stopTimer() {
   if (stoptime == false) {
     stoptime = true;
     start.disabled = false;
+      sttop.disabled = true;
+      reset.disabled =false;
+      
   }
 }
 
@@ -65,6 +72,8 @@ function resetTimer() {
   sec = 0;
   min = 0;
   start.disabled = false;
+  sttop.disabled= false;
+  reset.disabled= true;
 }
 
 const icon = document.getElementsByClassName("hamburgerlines")[0];
