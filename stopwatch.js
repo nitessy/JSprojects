@@ -4,7 +4,7 @@ const timer = document.getElementById("stopwatch");
 var hr = 0;
 var min = 0;
 var sec = 0;
-var stoptime = true;
+var stoptime = null;
 let start = document.getElementById("start") ;
 let sttop = document.getElementById("stop");
 let reset = document.getElementById("reset");
@@ -12,69 +12,48 @@ let reset = document.getElementById("reset");
 
 
 
-function startTimer() {
-  if (stoptime == true) {
-    stoptime = false;
-    timerCycle();
-    start.disabled = true;
-    reset.disabled = false;
-     sttop.disabled = false;
-  
-  }
-}
-function stopTimer() {
-  if (stoptime == false) {
-    stoptime = true;
-    start.disabled = false;
-      sttop.disabled = true;
-      reset.disabled =false;
-      
-  }
-}
 
 function timerCycle() {
-  if (stoptime == false) {
-    sec = parseInt(sec);
-    min = parseInt(min);
-    hr = parseInt(hr);
 
     sec = sec + 1;
 
-    if (sec == 60) {
+    if (sec === 60) {
       min = min + 1;
       sec = 0;
     }
-    if (min == 60) {
+    if (min === 60) {
       hr = hr + 1;
       min = 0;
       sec = 0;
     }
 
-    if (sec < 10 ) {
-      sec = "0" + sec;
-    }
-    if (min < 10 ) {
-      min = "0" + min;
-    }
-    if (hr < 10 ) {
-      hr = "0" + hr;
-    }
+    let newtime =  `${hr.toString().padStart(2,'0')}:${min.toString().padStart(2,'0')}:${sec.toString().padStart(2,'0')}`;
 
-    timer.innerHTML = hr + ":" + min + ":" + sec;
+    timer.innerHTML = newtime;
 
-    setTimeout("timerCycle()", 1000);
-  }
 }
-function resetTimer() {
-  timer.innerHTML = "00:00:00";
-  stoptime = true;
-  hr = 0;
+
+start.addEventListener('click', () => {
+if(stoptime === null){
+  stoptime = setInterval(timerCycle,1000);
+}
+});
+
+sttop.addEventListener('click' , () => {
+  clearInterval(stoptime);
+  stoptime = null; 
+});
+
+
+reset.addEventListener('click', () =>{
+  clearInterval(stoptime);
+  stoptime = null;
   sec = 0;
   min = 0;
-  start.disabled = false;
-  sttop.disabled= false;
-  reset.disabled= true;
-}
+  hr = 0;
+  timer.innerHTML = "00:00:00" ;
+});
+
 
 const icon = document.getElementsByClassName("hamburgerlines")[0];
 icon.addEventListener('click', () =>{
