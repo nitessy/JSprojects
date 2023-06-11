@@ -64,6 +64,7 @@ function resetTimer() {
   hr = 0;
   sec = 0;
   min = 0;
+  start.disabled = false;
 }
 
 const icon = document.getElementsByClassName("hamburgerlines")[0];
