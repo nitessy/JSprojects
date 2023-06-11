@@ -5,16 +5,23 @@ var hr = 0;
 var min = 0;
 var sec = 0;
 var stoptime = true;
+let start = document.getElementById("start") ;
+
+
+
 
 function startTimer() {
   if (stoptime == true) {
     stoptime = false;
     timerCycle();
+    start.disabled = true;
+  
   }
 }
 function stopTimer() {
   if (stoptime == false) {
     stoptime = true;
+    start.disabled = false;
   }
 }
 
