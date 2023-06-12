@@ -19,6 +19,7 @@ let hrs = document.getElementById("hours");
       let secs = document.getElementById("seconds");
       let display = document.getElementById("display");
       let start = document.getElementById("start");
+      let sttop = document.getElementById("stop");
       let timer;
 
 function m(){
@@ -39,6 +40,7 @@ function m(){
 
 
       function watch() {
+        display.hidden = false,
         start.disabled = true;//the start button will be disabled once the timer starts
         hrs.disabled = true;
         mins.disabled = true;
@@ -79,12 +81,21 @@ function m(){
           // If the count down is finished, play audio file
           if (display.innerHTML == "00:00:00") {
             clearInterval(x);
-            audio.play()
+            audio.play() ;
+            sttop.addEventListener('click', () =>{
+              audio.pause()  })
         }}, 1000);
-    }
+      }
+
+
+
+    
+
+    
+    
     
 
 
     
 
-    
+  
