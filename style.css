@@ -25,7 +25,8 @@
     align-items: center;
     padding: 15px;
     background-color: #f4f4f4;
-    position: sticky;
+    position: absolute;
+    top: 0;
   }
   .logo{
     font-weight: bolder;
