@@ -15,11 +15,11 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 12px;
+    padding: 15px;
 }
 .logo{
     font-weight: bolder;
-    font-size: 2.3vw;
+    font-size: 25px;
     color: rgb(43, 86, 90);
     font-family: 'Cinzel', serif;
     text-shadow: 1px 1px black;
@@ -31,7 +31,7 @@ body{
 
 }
 .link{
-    padding: 1%;
+    padding: 10px;
     list-style-type: none;
     transition: all 0.3s;
 }
@@ -129,36 +129,33 @@ body{
 .hamburgerlines.open + .linkscontainer{
     left: 0%;
 }
-}
-    
+}        
 
 h1{
     font-weight: bolder;
     text-align: center;
     color: red;
-    margin-top: 2.6%;
-    font-weight: bolder;
-    letter-spacing: 0.6vw;
-    font-size: 2.5vw;
+    margin: 30px;
+    font-size: 35px;
 }
 
 h2{
-    margin-top: 2%;
+    margin: 20px;
    /* font-family: 'Zeyada', cursive; 
      font-family: 'Tilt Warp', cursive; */
     font-family: 'Tangerine', cursive;
-    font-weight:bolder;
+    font-weight: bold;
     text-align: center;
     color: blueviolet;
-    letter-spacing:1.2vw;
-    font-size: 3vw;
+    letter-spacing: 8px;
+    font-size: 45px;
 
 }
  
 .strange{
 position: relative;
 align-self: center;
-/* height: 50vh; */
+height: 50vh;
 }
 
 
@@ -182,21 +179,17 @@ background-color: #e74c3c;
 }
 .box{
 display: inline-block;
-/* height: 200px; */
-height: 26vh;
-margin-top: 3%;
+height: 200px;
 position: relative;
 transition: all .2s ease;
 }
 .clock{
 border-radius: 60px;
-border: 3px solid blueviolet;
- height: 80px; 
- width: 80px; 
-/* height: 50%; */
-/* width: 50%; */
+border: 3px solid #fff;
+height: 80px;
+width: 80px;
 position: relative;
-top: 20%;
+top: 28%;
 top: -webkit-calc(50% - 43px);
 top: calc(50% - 43px);
   left: 35%;
@@ -206,7 +199,7 @@ top: calc(50% - 43px);
 .clock:after{
   content: "";
   position: absolute;
-  background-color:blueviolet;
+  background-color: #fff;
   top:2px;
   left: 48%;
   height: 38px;
@@ -224,7 +217,7 @@ top: calc(50% - 43px);
 .clock:before{
   content: "";
   position: absolute;
-  background-color: blueviolet;
+  background-color: #fff;
   top:6px;
   left: 48%;
   height: 35px;
@@ -247,6 +240,10 @@ top: calc(50% - 43px);
     align-self: center;
 }
 
+
+
+
+
  @media   ( max-width:768px){ 
     h1{ 
          font-size: 31px; 
@@ -266,4 +263,5 @@ top: calc(50% - 43px);
      .master{ 
         margin-top: 51px; 
          margin-bottom: 10px; 
+         
      } } 
