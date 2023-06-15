@@ -247,6 +247,7 @@ top: calc(50% - 43px);
     justify-content: center;
     align-self: center;
     margin-top: 8%;
+    height: min-content;
 }
 
 
