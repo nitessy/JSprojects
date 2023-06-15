@@ -246,10 +246,7 @@ top: calc(50% - 43px);
     align-items: center;
     justify-content: center;
     align-self: center;
-    margin-top: 8%;
-    bottom: 20px;
 }
-
 
  @media   ( max-width:768px){ 
     h1{ 
