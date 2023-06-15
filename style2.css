@@ -5,6 +5,7 @@
 body{
     font-family: 'Cinzel', serif;
     background-color: black;
+    height: 100vh;
 }
 
 .header{
@@ -15,11 +16,11 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 15px;
+    padding: 12px;
 }
 .logo{
     font-weight: bolder;
-    font-size: 25px;
+    font-size: 2.3vw;
     color: rgb(43, 86, 90);
     font-family: 'Cinzel', serif;
     text-shadow: 1px 1px black;
@@ -31,7 +32,7 @@ body{
 
 }
 .link{
-    padding: 10px;
+    padding: 1%;
     list-style-type: none;
     transition: all 0.3s;
 }
@@ -136,29 +137,29 @@ h1{
     font-weight: bolder;
     text-align: center;
     color: red;
-    margin: 35px;
-    font-weight: bold;
-    letter-spacing: 15px;
-    font-size: 45px;
+    margin-top: 2.6%;
+    font-weight: bolder;
+    letter-spacing: 0.6vw;
+    font-size: 2.5vw;
 }
 
 h2{
-    margin: 30px;
+    margin-top: 2%;
    /* font-family: 'Zeyada', cursive; 
      font-family: 'Tilt Warp', cursive; */
     font-family: 'Tangerine', cursive;
     font-weight:bolder;
     text-align: center;
     color: blueviolet;
-    letter-spacing: 8px;
-    font-size: 52px;
+    letter-spacing:1.2vw;
+    font-size: 3vw;
 
 }
  
 .strange{
 position: relative;
 align-self: center;
-height: 50vh;
+/* height: 50vh; */
 }
 
 
@@ -182,17 +183,21 @@ background-color: #e74c3c;
 }
 .box{
 display: inline-block;
-height: 200px;
+/* height: 200px; */
+height: 26vh;
+margin-top: 3%;
 position: relative;
 transition: all .2s ease;
 }
 .clock{
 border-radius: 60px;
-border: 3px solid #fff;
-height: 80px;
-width: 80px;
+border: 3px solid blueviolet;
+ height: 80px; 
+ width: 80px; 
+/* height: 50%; */
+/* width: 50%; */
 position: relative;
-top: 28%;
+top: 20%;
 top: -webkit-calc(50% - 43px);
 top: calc(50% - 43px);
   left: 35%;
@@ -202,7 +207,7 @@ top: calc(50% - 43px);
 .clock:after{
   content: "";
   position: absolute;
-  background-color: #fff;
+  background-color:blueviolet;
   top:2px;
   left: 48%;
   height: 38px;
@@ -220,7 +225,7 @@ top: calc(50% - 43px);
 .clock:before{
   content: "";
   position: absolute;
-  background-color: #fff;
+  background-color: blueviolet;
   top:6px;
   left: 48%;
   height: 35px;
@@ -241,28 +246,27 @@ top: calc(50% - 43px);
     align-items: center;
     justify-content: center;
     align-self: center;
-    margin-top: 30px;
+    margin-top: 8%;
 }
 
 
-@media (max-width:768px){
-    h1{
-        font-size: 31px;
-        margin: 11px;
-        letter-spacing: 5px;
-    }
-    .logo{
-        font-size: 19px;
-    }
+ @media   ( max-width:768px){ 
+    h1{ 
+         font-size: 31px; 
+         margin: 11px; 
+         letter-spacing: 5px; 
+     } 
+     .logo{ 
+        font-size: 19px; 
+     } 
 
-    h2{
-        font-size: 32px;
-        letter-spacing: 7px;
-        margin-top: 15px;
-        margin-bottom: 6px;
-    }
-    .master{
-        margin-top: 14px;
-        margin-bottom: 20px;
-    }
-}
+    h2{ 
+         font-size: 32px; 
+         letter-spacing: 7px; 
+         margin-top: 15px; 
+         margin-bottom: 6px; 
+     } 
+     .master{ 
+        margin-top: 51px; 
+         margin-bottom: 10px; 
+     } } 
